@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css 우선순위</title>
+
+<!-- !important > 직접 선언 > div문 선언 > 외부파일 -->
+
+<link rel = "stylesheet" href="mycss.css">	<!-- 3순위  -->
+<style type="text/css">
+	div {
+		border: solid 1px blue; /* 테두리 : 실선, 선두께(3px) 색깔(navy)   2순위 */  
+		background-color: #cce6ff;
+		color : red;	/* 글자색 */
+}
+</style>
+</head>
+<body>
+	
+	<!-- HTML의 주석문 -->
+
+<div style="border: solid 1px red; background-color: #ffffe6;">나는 DIV1</div>			<!-- 1순위  -->
+<div>나는 DIV2</div>
+</body>
+</html>

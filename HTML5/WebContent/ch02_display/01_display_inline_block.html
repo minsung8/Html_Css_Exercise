@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>display</title>
+
+<style type="text/css">
+	
+	div#div1{
+		border: solid 2px green;
+		width: 100px;
+		height: 300px;
+	}
+	
+	#div2{
+		border: solid 5px black;
+		width: 100px;
+		height: 300px;
+	}
+	
+	.food {
+		display: block;
+		border: solid 5px yellow;
+	}
+	
+	
+	/*
+		css 우선순위
+		
+		아이디# > 클래스 > 테그
+	*/
+	
+	#myid{
+		font-weight: bold;
+		color: red;
+	}
+	
+	.myclass{
+		background-color: #ccffe6;
+		color: blue;
+		font-size: 24pt;
+	}
+		
+		/*
+		css 우선순위
+		
+		동일한 계층일 경우 덮어씌운다 => 마지막이 적용 
+	*/
+	
+</style>
+
+</head>
+<body>
+	
+	<hr>	<!-- 수평선  -->
+	<h2> Inline element => 가로로 표현 </h2>
+	<a href="http://www.naver.com">네이버</a>
+	<a href="http://www.daum.net">다음</a>
+	<hr>	<!-- 수평선  -->
+	
+	<div>div는 display가 block 방식</div>
+	<div>div는 display가 block 방식</div>
+	
+	<label>레이블1 label은 display가 inline 방식s</label>
+	<label>레이블2</label>
+	<label>레이블2</label>
+	
+	<h1>block 방식 - 세로로 떨어지는 방식</h1>
+	<h1>block 방식 - 세로로 떨어지는 방식</h1>
+	<h2>block 방식 - 세로로 떨어지는 방식</h2>
+	
+	<span>span 테그는 inline 방식</span>
+	
+	<div>inline 방식의 태그는 &lt;a&gt;, &lt;label&gt;, &lt;span&gt; 등이 있다</div>
+	<!-- &nbsp; : 공백  / &amp; : &을 의미 / &quot; : 쌍따옴표 / &#039 : 홑따옴표 / &#035 : #을 의미 -->
+	
+	<hr>
+	
+	<div style="boader: solid 1px red; width:100px; height:300px;"> div 블럭요소는 witdh 및 height가 적용</div>
+	<div style="boader: solid 1px blue; width:50%; height:500px;"> div 블럭요소는 witdh 및 height가 적용</div>
+	
+	
+	<span style="border: solid 1px red;">짜장면 => 인라인요소는 width와 height 적용 불가</span>
+	<span style="border: solid 1px red;">탕수육</span>
+	<span style="border: solid 1px red;">팔보채</span>
+	
+	<hr>
+	
+	<span style="display: inline; border: solid 1px red;">탕수육</span>
+	<span style="display: inline; border: solid 1px red;">짜장면</span>
+	<span style="display: inline; border: solid 1px red;">팔보채</span><hr>
+	<!-- width, height 적용 불가 -->
+	
+	<hr>
+	
+	<span style="display: block; border: solid 1px red;">탕수육</span>
+	<span style="display: block; border: solid 1px red;">짜장면</span>
+	<span style="display: block; border: solid 1px red;">팔보채</span><hr>
+	<!-- width크기가 전체로 잡힘 -->
+	
+	<span class="food" id="div2">탕수육</span>
+	<span class="food">짜장면</span>
+	<span class="food">팔보채</span>
+	
+	<hr>
+	<!-- width크기가 전체로 잡힘 -->
+	
+	<hr>
+	
+	<span style="display: inline-block; border: solid 1px red; width:100px; height:300px;">탕수육2</span>
+	<span style="display: inline-block; border: solid 1px red; width:100px; height:300px;">짜장면2</span>
+	<span style="display: inline-block; border: solid 1px red; width:100px; height:300px;">팔보채2</span>
+		
+	<div id="div1">div는 display가 block 방식</div>
+	<div id="div2">div는 display가 block 방식</div>
+	
+	<div class="myclass" id="myid">css 우선순위</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

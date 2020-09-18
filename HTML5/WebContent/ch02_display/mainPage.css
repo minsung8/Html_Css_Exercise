@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+body {
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	
+	border: solid 1px gray;
+	/* margin: 100px 100px 100px 100px; */	/* 상우좌하 바깥여백  */
+	/* margin: 100px; */	/* 상우좌하 100px 여백  */
+	/* margin: 100px 50px;	*/ /* 상하:100px, 좌우:50px */
+	
+	margin: 0;
+	
+	/* padding은 안쪽여백 */
+	/* padding: 100px 100px 100px 100px; 	/* 상우좌하 안쪽여백  */
+	
+	padding: 0;
+	
+}
+
+div#container {
+	border: solid 1px navy;
+	width: 80%;
+	margin: 20px auto;		/* auto => 가운데 정렬 */
+}
