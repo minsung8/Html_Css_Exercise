@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+body {
+	
+	margin: 0;
+	padding: 0;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	
+	word-break: break-all;
+	
+}
+
+div#wrap {
+	
+	border: solid 0px navy;
+	width: 960px;
+	margin: 0 auto;
+	
+}
+
+header#page_header ul, footer#page_footer ul{
+	
+	list-style-type: none;
+	
+}
+
+header#page_header li, footer#page_footer li {
+	
+	border: solid 0px gray;
+	display: inline-block;
+	width: 150px;
+	margin: 0 20px 0 0;
+}
+
+div#first li{
+	line-height: 40px;
+}
+
+div#second > ul > li{
+	line-height: 20px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: blue;
+}
+
+a:visited {
+	color: blue;
+}
+
+header#page_header a:hover {			/* 마우스를 올려놓았을 때  */
+	background-color: red;
+	color: yellow;
+	font-weight: bolder;
+}
+
+div#line {
+	/* border-top: solid 2px red;	*/
+	/* border-right: solid 2px blue; */
+	border-bottom: solid 2px green;
+	/* border-left: solid 2px yellow; */
+	margin-bottom: 20px;
+}
+
+section#ports {
+	/* border: solid 1px red; */
+	float: left; 	/* 가로방향으로 표시 */
+	width: 72%;
+}
+
+section#ports aside {
+	float: right;
+	width: 35%;
+	margin-left: 20px;
+	
+	font-size: 20pt;
+	font-weight: bolder;
+	color: #b30059;
+	line-height: 40px;
+}
+
+section#sidebar {
+	/* border: solid 1px yellow;   */
+	float: right; 	/* 가로방향으로 표시 */
+	width: 24%;
+	border-left: solid 1px gray;
+	padding-left: 1%''
+}
+
+footer#page_footer {
+	/* border: solid 1px blue; */
+	
+	clear: both;	/* float을 해제해서 페이지 하단에 안착 */
+	text-align: center;
+}
+
+p {
+	margin: 0 0 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
