@@ -31,7 +31,7 @@
 		line-height: 40px;
 	}
 	
-	label{
+	label.title{
 		display: inline-block;
 		width: 100px;
 		color: navy;
@@ -42,6 +42,23 @@
 		height: 20px;	
 	}
 	
+	select {
+		width: 150px;
+	}
+	
+	select.myselect{
+		height: 25px;
+	}
+	
+	input.btn {
+		width: 100px;
+		height: 40px;
+		background-color: #000;
+		color: #fff;
+		font-size: 16pt;
+		border: none;
+		margin: 20px 0 0 40px;
+	}
 	
 </style>
 </head>
@@ -53,66 +70,101 @@
 			
 		<fieldset>
 			<legend>회원가입 정보</legend>
-			
+				
 			<ul>
 				<li>
-					<label for="userid">아이디</label>
+					<label for="userid" class="title">아이디</label>
 					<input type="text" id="userid" class="myinput" size="20" maxlength="20" autofocus required/>
 				</li>
 				<li>
-					<label for="passwd1">암호</label>
+					<label for="passwd1" class="title">암호</label>
 					<input type="password" id="passwd1" class="myinput" size="20" maxlength="20" autofocus required/>
 				</li>
 				<li>
-					<label for="passwd2">암호확인</label>
+					<label for="passwd2" class="title">암호확인</label>
 					<input type="password" id="passwd2" class="myinput" size="20" maxlength="20" autofocus required/>
 				</li>
 				<li>
-					<label for="name">성명</label>
+					<label for="name" class="title">성명</label>
 					<input type="text" id="name" class="myinput" size="20" maxlength="20" autofocus required/>
 				</li>
 				<li>
-					<label for="email">이메일</label>
+					<label for="email" class="title">이메일</label>
 					<input type="email" id="email" class="myinput" size="20" maxlength="40" autofocus required placeholder="예: abc@naver.com" />
 				</li>
 				<li>
-					<label>성별</label>
+					<label class="title">성별</label>
 					<label for="male">남자</label>
 					<input type="radio" name="gender" id="male" value="1" checked/>
 					<label for="female">여자</label>
 					<input type="radio" name="gender" id="female" value="2"/>
 				</li>
 				<li>
-					<label for="">취미</label>
-					<input id=""/>
+					<label class="title">취미</label>
+					<label for="hobby1">게임</label><input type="checkbox" name="hobby" id="hobby1" value="1"/>&nbsp;&nbsp;
+					<label for="hobby2">영화감상</label><input type="checkbox" name="hobby" id="hobby2" value="2"/>&nbsp;&nbsp;
+					<label for="hobby3">글쓰기</label><input type="checkbox" name="hobby" id="hobby3" value="3"/>&nbsp;&nbsp;
+					<label for="hobby4">음악감상</label><input type="checkbox" name="hobby" id="hobby4" value="4"/>&nbsp;&nbsp;
 				</li>
 								<li>
-					<label for="">최종학력</label>
-					<input id=""/>
+					<label class="title">최종학력</label>
+					<select class="myselect">
+						<option value="1">고졸</option>
+						<option value="2" selected>초대졸</option>
+						<option value="3">대졸</option>
+						<option value="4">대학원졸</option> 
+					</select>
 				</li>
 								<li>
-					<label for="">선호음식</label>
-					<input id=""/>
+					<label for="" class="title">선호음식</label>
+					<select size="3" multiple>
+						<option value="1">짜장면</option>
+						<option value="2">파스타</option>
+						<option value="3">파타이</option>
+						<option value="4">부대찌게</option>
+						<option value="5">떡볶이</option> 
+						<option value="6">치킨</option> 
+					</select>
+
 				</li>
 								<li>
-					<label for="">선호프로그램</label>
-					<input id=""/>
-				</li>
-								<li>
-					<label for="">웹브라우저</label>
-					<input id=""/>
-				</li>
-								<li>
-					<label for="">파일첨부</label>
-					<input id=""/>
+					<label class="title">선호프로그램</label>
+					<select class="myselect">
+						<optgroup label="데이터베이스">
+							<option value="1">Oracle</option>
+							<option value="2">MSSQL</option>
+							<option value="3">SyBase</option>
+						</optgroup>
+						<optgroup label="개발언어">
+							<option value="4">Java</option>
+							<option value="4">Jsp</option>
+							<option value="4">Spring</option>
+							<option value="4">C/C++</option> 
+						</optgroup>
+
+					</select>
 				</li>
 				<li>
-					<label for="">가입인사</label>
-					<input id=""/>
+					<label for="browsername" class="title">웹브라우저</label>
+					<input list="browserType" id="browsername"/>
+					<datalist id="browserType">
+						<option value="Chrome"/>
+						<option value="Opera"/>
+						<option value="Safari"/>
+						<option value="Explore"/>
+					</datalist>
+				</li>
+								<li>
+					<label for="addFile" class="title">파일첨부</label>
+					<input type="file" id="addFile"/>
 				</li>
 				<li>
-					<input type="submit" value="확인"/>
-					<input type="reset" value="취소"/>		
+					<label for="registerComment" class="title">가입인사</label>
+					<textarea rows="5" cols="30" id="registerComment"></textarea>
+				</li>
+				<li>
+					<input type="submit" class="btn" value="확인"/>
+					<input type="reset" class="btn" value="취소"/>		
 				</li>
 			</ul>
 			</fieldset>	

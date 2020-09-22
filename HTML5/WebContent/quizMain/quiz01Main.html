@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	body {
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	
+	border: solid 1px gray;
+	/* margin: 100px 100px 100px 100px; */	/* 상우좌하 바깥여백  */
+	/* margin: 100px; */	/* 상우좌하 100px 여백  */
+	/* margin: 100px 50px;	*/ /* 상하:100px, 좌우:50px */
+	
+	margin: 0;
+	
+	/* padding은 안쪽여백 */
+	/* padding: 100px 100px 100px 100px; 	/* 상우좌하 안쪽여백  */
+	
+	padding: 0;
+	
+}
+
+div#container {
+	border: solid 0px navy;
+	width: 80%;
+	margin: 20px auto;		/* auto => 가운데 정렬 */
+}
+
+div#header {
+	border: solid 0px red;
+	height: 100px;
+	background-color: #cccccc;
+	margin-top: 200px; /* margin: 50px 0px 0px 0px;와 같다 */
+}
+
+div#side {
+	width: 30%;
+	background-color: #888;
+}
+
+div#contents {
+	width: 69.44%;
+	background-color: #eee;
+}
+
+.customDisplay {
+	display: inline-block;
+	height: 400px;
+}
+
+div#footer {
+	height: 80px;
+	background-color: #ddd;
+}
+	
+	
+</style>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<form action="register.do">
+				<fieldset>
+					<ul>
+						<li>
+							<label for="userid" class="title">아이디</label>
+							<input type="text" id="userid" class="myinput" size="20" maxlength="20" autofocus required/>
+						</li>
+						<li>
+							<label for="passwd1" class="title">암호</label>
+							<input type="password" id="passwd1" class="myinput" size="20" maxlength="20" autofocus required/>
+						</li>
+						<li>
+							<input type="submit" class="btn" value="로그인"/>
+							<input type="reset" class="btn" value="취소"/>		
+						</li>
+					</ul>
+				</fieldset>
+			</form>
+		</div>
+		
+		<div id="side" class="customDisplay">
+		
+		</div>
+		
+		<div id="contents" class="customDisplay">
+		
+		</div>
+		
+		<div id="footer">
+		
+		</div>
+	</div>
+</body>
+</html>
