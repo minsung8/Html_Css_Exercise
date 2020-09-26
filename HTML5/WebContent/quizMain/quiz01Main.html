@@ -3,20 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
 <style type="text/css">
 	
 	body {
 	font-family: Arial, "MS Trebuchet", sans-serif;
 	
-	border: solid 1px gray;
-	/* margin: 100px 100px 100px 100px; */	/* 상우좌하 바깥여백  */
-	/* margin: 100px; */	/* 상우좌하 100px 여백  */
-	/* margin: 100px 50px;	*/ /* 상하:100px, 좌우:50px */
-	
 	margin: 0;
-	
-	/* padding은 안쪽여백 */
-	/* padding: 100px 100px 100px 100px; 	/* 상우좌하 안쪽여백  */
 	
 	padding: 0;
 	
@@ -25,73 +18,155 @@
 div#container {
 	border: solid 0px navy;
 	width: 80%;
-	margin: 20px auto;		/* auto => 가운데 정렬 */
+	margin: 0 auto;		/* auto => 가운데 정렬 */
+	margin-top: 50px;
 }
 
 div#header {
-	border: solid 0px red;
-	height: 100px;
-	background-color: #cccccc;
-	margin-top: 200px; /* margin: 50px 0px 0px 0px;와 같다 */
+	height: 150px;
+	margin-top: 100px; /* margin: 50px 0px 0px 0px;와 같다 */
 }
 
 div#side {
+	border: solid 1px red;
+
 	width: 30%;
 	background-color: #888;
 }
 
 div#contents {
-	width: 69.44%;
-	background-color: #eee;
+
+	width: 59.44%;
+	background-color: black;
+	color: yellow;
+	margin-left: 10px;
+	padding-bottom: 150px;
 }
 
 .customDisplay {
-	display: inline-block;
-	height: 400px;
+	border: solid 1px red;
 }
 
 div#footer {
 	height: 80px;
 	background-color: #ddd;
 }
-	
-	
+
+div.left {
+    float: left;
+}
+div.right {
+    width: 75%;
+    float: right;
+}
+
+label {
+	display: inline-block;
+	width: 48px;
+}
+
+
+div.left2 {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    color: white;
+    background: gray;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 200px;
+}
+div.right2 {
+    width: 73.5%;
+    float: right;
+    box-sizing: border-box;
+ 	color: #FFFACD;
+    background: black;
+    padding-bottom: 265.8px;
+
+}
+
+footer.bottom {
+	clear: both;
+	border: solid 0px red;
+	background-color: #D3D3D3;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 20px;
+}
+
+p {
+	margin: 0 0 20px 0;
+}
+
+
+
 </style>
 </head>
 <body>
 	<div id="container">
 		<div id="header">
-			<form action="register.do">
-				<fieldset>
-					<ul>
-						<li>
-							<label for="userid" class="title">아이디</label>
-							<input type="text" id="userid" class="myinput" size="20" maxlength="20" autofocus required/>
-						</li>
-						<li>
-							<label for="passwd1" class="title">암호</label>
-							<input type="password" id="passwd1" class="myinput" size="20" maxlength="20" autofocus required/>
-						</li>
-						<li>
-							<input type="submit" class="btn" value="로그인"/>
-							<input type="reset" class="btn" value="취소"/>		
-						</li>
-					</ul>
-				</fieldset>
-			</form>
+	        <div class="left">
+				<form action="register.do">
+					<fieldset style="border: none;">
+						<ul style="list-style-type: none;>
+							<li>
+								<label for="userid" class="title">아이디</label>
+								<input type="text" id="userid" class="myinput" size="20" maxlength="20" autofocus required/>
+							</li>
+							<li>
+								<label for="passwd1" class="title">암호</label>
+								<input type="password" id="passwd1" class="myinput" size="20" maxlength="20" autofocus required/>
+							</li>
+							<li>
+								<input type="submit" class="btn" value="로그인"/>
+								<input type="reset" class="btn" value="취소"/>		
+							</li>						
+						</ul>
+					</fieldset>
+				</form>
+	        </div>
+	        <div class="right">
+	        	<img src="images/daum.png" width="250px" height="100px">
+	        </div>
 		</div>
 		
-		<div id="side" class="customDisplay">
+	    <div>
+	        <div class="left2">
+		        <nav>
+					<div id="first">
+						<ul style="list-style-type: none;">
+							<li>카페</li></br>
+							<li>메일</li></br>
+							<li>뉴스</li></br>
+							<li>지도</li></br>
+							<li>증권</li></br>
+							<li>블로그</li>
+						</ul>
+					</div>
+				</nav>
+	        </div>
+	        <div class="right2">
+	        	<nav>
+					<div id="first">
+						<ul style="list-style-type: none;">
+							<h2>기사1 제목입력</h2>
+							<h3>"부동산 거래 동맥경화 우려.. 금리인하 검토시기 왔다"</h3>
+							<h2>기사2 제목입력</h2>
+							<h3>"예매창 지붕 뚫었다"..'어벤져스:엔드게임'4DX,예매 오픈 후 순삭'매진'[공식입장]</h3></br>
+						</ul>
+					</div>
+				</nav>
+	        </div>
+	    </div>
+	    
+	    <div class="bottom">
+	    </div>
+
+		<footer class="bottom">
+	    	<p>Copyright&copy;Kakao Corp. All rights reserved.</p>			
+		</footer>
 		
-		</div>
-		
-		<div id="contents" class="customDisplay">
-		
-		</div>
-		
-		<div id="footer">
-		
-		</div>
 	</div>
 </body>
 </html>
